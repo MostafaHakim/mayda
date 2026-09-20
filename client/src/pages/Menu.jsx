@@ -671,14 +671,14 @@ function Badge({ group, label, className = "" }) {
 
 const NAV = [
   // Order follows the client's sketch. `menu` is the current page.
-  { id: "menu", href: "#menu" },
-  { id: "home", href: "#top" },
-  { id: "services", href: "#services" },
-  { id: "location", href: "#location" },
-  { id: "contact", href: "#contact" },
+  { id: "menu", path: "/" },
+  { id: "home", href: "home" },
+  { id: "services", href: "services" },
+  { id: "location", href: "locations" },
+  { id: "contact", href: "contact" },
 ];
 
-export default function MenuPage() {
+export default function Menu() {
   const [lang, setLang] = useState("en");
   const [tab, setTab] = useState("food");
   const [sel, setSel] = useState({ group: "all", cat: "all" });
