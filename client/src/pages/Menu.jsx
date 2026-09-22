@@ -1040,6 +1040,15 @@ export default function Menu() {
                             <p className="text-sm leading-relaxed text-[var(--muted)] line-clamp-2 sm:line-clamp-none">
                               {i.desc[lang]}
                             </p>
+                          </div>
+                        </article>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+          </div>
         </section>
       </main>
 
