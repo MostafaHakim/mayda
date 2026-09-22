@@ -1014,7 +1014,7 @@ export default function Menu() {
                   </button>
                 </div>
               ) : (
-                <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                <ul className="grid gap-5 grid-cols-2 xl:grid-cols-3">
                   {items.map((i) => {
                     const idx = MENU.indexOf(i);
                     return (
@@ -1037,7 +1037,7 @@ export default function Menu() {
                                 €{i.price.toFixed(2)}
                               </span>
                             </div>
-                            <p className="text-sm leading-relaxed text-[var(--muted)]">
+                            <p className="text-sm leading-relaxed text-[var(--muted)] line-clamp-2 sm:line-clamp-none">
                               {i.desc[lang]}
                             </p>
                           </div>
