@@ -834,7 +834,7 @@ export default function Menu() {
 
       <main>
         {/* ------------------------------- Hero ------------------------------ */}
-        <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+        <div className="mx-auto max-w-7xl px-2 pt-2 sm:pt-6 sm:px-6">
           <section className="sf-dark relative overflow-hidden rounded-[28px] bg-[var(--ink)] text-white">
             <TileBackdrop />
             <div className="pointer-events-none absolute -end-28 top-1/2 w-[560px] max-w-none -translate-y-1/2 opacity-25 md:opacity-100">
@@ -870,7 +870,7 @@ export default function Menu() {
         {/* -------------------------------- Menu ----------------------------- */}
         <section
           id="menu"
-          className="mx-auto max-w-7xl scroll-mt-40 px-4 pb-20 pt-14 sm:px-6"
+          className="mx-auto max-w-7xl scroll-mt-40 px-2 pb-6 sm:pb-20 pt-4 sm:pt-14 sm:px-6"
         >
           {/* Food menu | Drinks menu */}
           <div
