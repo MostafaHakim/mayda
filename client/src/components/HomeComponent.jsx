@@ -137,8 +137,8 @@ const HomeComponent = () => {
                   spaceBetween: 10,
                 },
               }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               className="w-full h-full rounded-xl overflow-hidden"
             >
               {foods.map((food) => (
@@ -249,8 +249,8 @@ const HomeComponent = () => {
                   spaceBetween: 10,
                 },
               }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               className="w-full h-full rounded-xl overflow-hidden"
             >
               {foods.map((food) => (
