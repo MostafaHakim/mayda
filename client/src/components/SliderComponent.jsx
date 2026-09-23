@@ -2,11 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import Item1 from "../assets/item1.jpg";
-import Item2 from "../assets/item2.jpg";
-import Item3 from "../assets/item3.jpg";
-import Item4 from "../assets/item4.jpg";
-import Item5 from "../assets/item4.jpg";
 
 const SliderComponent = () => {
   return (
@@ -30,7 +25,11 @@ const SliderComponent = () => {
             minus!
           </p>
         </div>
-        <img src={Item1} alt="" className="w-full h-full" />
+        <img
+          src="https://unsplash.com/photos/three-plates-of-asian-food-on-wood-table--YHSwy6uqvk"
+          alt=""
+          className="w-full h-full"
+        />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
         <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
@@ -40,7 +39,11 @@ const SliderComponent = () => {
             minus!
           </p>
         </div>
-        <img src={Item2} alt="" className="w-full h-full" />
+        <img
+          src="https://unsplash.com/photos/pesto-pasta-with-sliced-tomatoes-served-on-white-ceramic-plate-12eHC6FxPyg"
+          alt=""
+          className="w-full h-full"
+        />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
         <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
@@ -50,7 +53,11 @@ const SliderComponent = () => {
             minus!
           </p>
         </div>
-        <img src={Item3} alt="" className="w-full h-full" />
+        <img
+          src="https://unsplash.com/photos/people-laughing-at-restaurant-dinner-xzPq2pQxAFk"
+          alt=""
+          className="w-full h-full"
+        />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
         <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
@@ -60,7 +67,11 @@ const SliderComponent = () => {
             minus!
           </p>
         </div>
-        <img src={Item4} alt="" className="w-full h-full" />
+        <img
+          src="https://unsplash.com/photos/breakfast-spread-with-waffles-eggs-and-juice-hrlvr2ZlUNk"
+          alt=""
+          className="w-full h-full"
+        />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
         <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
@@ -70,7 +81,11 @@ const SliderComponent = () => {
             minus!
           </p>
         </div>
-        <img src={Item5} alt="" className="w-full h-full" />
+        <img
+          src="https://unsplash.com/photos/a-table-topped-with-bowls-of-food-and-chopsticks-ZBSJ57K0Vcg"
+          alt=""
+          className="w-full h-full"
+        />
       </SwiperSlide>
     </Swiper>
   );
