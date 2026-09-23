@@ -26,7 +26,7 @@ const SliderComponent = () => {
           </p>
         </div>
         <img
-          src="https://unsplash.com/photos/three-plates-of-asian-food-on-wood-table--YHSwy6uqvk"
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="w-full h-full"
         />
@@ -40,7 +40,7 @@ const SliderComponent = () => {
           </p>
         </div>
         <img
-          src="https://unsplash.com/photos/pesto-pasta-with-sliced-tomatoes-served-on-white-ceramic-plate-12eHC6FxPyg"
+          src="https://plus.unsplash.com/premium_photo-1674106347866-8282d8c19f84?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="w-full h-full"
         />
@@ -54,7 +54,7 @@ const SliderComponent = () => {
           </p>
         </div>
         <img
-          src="https://unsplash.com/photos/people-laughing-at-restaurant-dinner-xzPq2pQxAFk"
+          src="https://images.unsplash.com/photo-1660634806611-d3d03b7c28fe?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="w-full h-full"
         />
@@ -68,7 +68,7 @@ const SliderComponent = () => {
           </p>
         </div>
         <img
-          src="https://unsplash.com/photos/breakfast-spread-with-waffles-eggs-and-juice-hrlvr2ZlUNk"
+          src="https://plus.unsplash.com/premium_photo-1676310055316-d73c9d5eeb51?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="w-full h-full"
         />
@@ -82,7 +82,7 @@ const SliderComponent = () => {
           </p>
         </div>
         <img
-          src="https://unsplash.com/photos/a-table-topped-with-bowls-of-food-and-chopsticks-ZBSJ57K0Vcg"
+          src="https://images.unsplash.com/photo-1677094544034-01421fc6c874?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="w-full h-full"
         />

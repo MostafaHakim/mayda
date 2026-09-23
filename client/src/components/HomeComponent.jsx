@@ -1,7 +1,6 @@
 import React from "react";
 import SliderComponent from "./SliderComponent";
-import Page1 from "../assets/page.png";
-import Page2 from "../assets/page2.png";
+
 const HomeComponent = () => {
   const foods = [
     {
