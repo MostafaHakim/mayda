@@ -9,11 +9,12 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Menu />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/locations" element={<Locations />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/" element={<Home />}>
+        <Route path="/menu" element={<Services />} />
+        <Route path="/service" element={<Services />} />
+        <Route path="/about" element={<Locations />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
     </Routes>
   );
 }
