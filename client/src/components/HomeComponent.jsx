@@ -15,28 +15,31 @@ const HomeComponent = () => {
       catagory: "food",
       subCatagory: ["halal", "Chicken"],
       image:
-        "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg",
+        "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=500",
       description: "Delicious aromatic chicken biryani with flavorful rice.",
       price: 220,
     },
     {
       id: 2,
       name: "Beef Burger",
-      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      image:
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=70",
       description: "Juicy beef burger with fresh vegetables and special sauce.",
       price: 180,
     },
     {
       id: 3,
       name: "Chicken Pizza",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+      image:
+        "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=70",
       description: "Cheesy chicken pizza topped with fresh ingredients.",
       price: 350,
     },
     {
       id: 4,
       name: "Chicken Shawarma",
-      image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783",
+      image:
+        "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=500&q=70",
       description:
         "Tender chicken shawarma wrapped with fresh salad and sauce.",
       price: 150,
@@ -44,14 +47,16 @@ const HomeComponent = () => {
     {
       id: 5,
       name: "Fried Chicken",
-      image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec",
+      image:
+        "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500&q=70",
       description: "Crispy and juicy fried chicken with a delicious coating.",
       price: 200,
     },
     {
       id: 6,
       name: "Chicken Pasta",
-      image: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb",
+      image:
+        "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=70",
       description:
         "Creamy chicken pasta prepared with special herbs and sauce.",
       price: 250,
@@ -59,28 +64,32 @@ const HomeComponent = () => {
     {
       id: 7,
       name: "French Fries",
-      image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+      image:
+        "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&q=70",
       description: "Golden crispy french fries served with special sauce.",
       price: 100,
     },
     {
       id: 8,
       name: "Chicken Noodles",
-      image: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841",
+      image:
+        "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=70",
       description: "Stir-fried noodles with chicken and fresh vegetables.",
       price: 180,
     },
     {
       id: 9,
       name: "Grilled Chicken",
-      image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435",
+      image:
+        "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500&q=70",
       description: "Juicy grilled chicken served with vegetables and sauce.",
       price: 300,
     },
     {
       id: 10,
       name: "Chicken Sandwich",
-      image: "https://images.unsplash.com/photo-1553909489-cd47e0907980",
+      image:
+        "https://images.unsplash.com/photo-1553909489-cd47e0907980?w=500&q=70",
       description: "Fresh chicken sandwich with cheese, vegetables and sauce.",
       price: 160,
     },
@@ -123,35 +132,23 @@ const HomeComponent = () => {
           </div>
           <div className=" py-4">
             <Swiper
-              modules={[Autoplay, FreeMode]}
-              spaceBetween={10}
+              touchRatio={1}
+              resistanceRatio={0.85}
+              spaceBetween={8}
               slidesPerView={2.2}
-              speed={800}
-              freeMode={{
-                enabled: true,
-                momentum: true,
-                momentumRatio: 0.7,
-                momentumVelocityRatio: 0.8,
-              }}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
+              speed={500}
               breakpoints={{
                 480: {
                   slidesPerView: 2.5,
-                  spaceBetween: 12,
+                  spaceBetween: 10,
                 },
-
                 768: {
                   slidesPerView: 3.2,
-                  spaceBetween: 15,
+                  spaceBetween: 12,
                 },
-
                 1024: {
                   slidesPerView: 4.2,
-                  spaceBetween: 18,
+                  spaceBetween: 15,
                 },
               }}
               className="w-full rounded-xl"
@@ -177,14 +174,16 @@ const HomeComponent = () => {
                       <img
                         src={food.image}
                         alt={food.name}
+                        loading="lazy"
+                        decoding="async"
                         className="
-              w-full
-              h-full
-              object-cover
-              group-hover:scale-110
-              transition-transform
-              duration-500
-            "
+    w-full
+    h-full
+    object-cover
+    group-hover:scale-110
+    transition-transform
+    duration-500
+  "
                       />
 
                       {/* Price */}
@@ -308,35 +307,23 @@ const HomeComponent = () => {
           </div>
           <div className=" py-4">
             <Swiper
-              modules={[Autoplay, FreeMode]}
-              spaceBetween={10}
+              touchRatio={1}
+              resistanceRatio={0.85}
+              spaceBetween={8}
               slidesPerView={2.2}
-              speed={800}
-              freeMode={{
-                enabled: true,
-                momentum: true,
-                momentumRatio: 0.7,
-                momentumVelocityRatio: 0.8,
-              }}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
+              speed={500}
               breakpoints={{
                 480: {
                   slidesPerView: 2.5,
-                  spaceBetween: 12,
+                  spaceBetween: 10,
                 },
-
                 768: {
                   slidesPerView: 3.2,
-                  spaceBetween: 15,
+                  spaceBetween: 12,
                 },
-
                 1024: {
                   slidesPerView: 4.2,
-                  spaceBetween: 18,
+                  spaceBetween: 15,
                 },
               }}
               className="w-full rounded-xl"
@@ -362,14 +349,16 @@ const HomeComponent = () => {
                       <img
                         src={food.image}
                         alt={food.name}
+                        loading="lazy"
+                        decoding="async"
                         className="
-              w-full
-              h-full
-              object-cover
-              group-hover:scale-110
-              transition-transform
-              duration-500
-            "
+    w-full
+    h-full
+    object-cover
+    group-hover:scale-110
+    transition-transform
+    duration-500
+  "
                       />
 
                       {/* Price */}
