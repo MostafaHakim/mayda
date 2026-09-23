@@ -15,12 +15,12 @@ const SliderComponent = () => {
       }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="w-full h-full"
+      className="w-full h-full rounded-xl overflow-hidden"
     >
       <SwiperSlide className="w-full h-full relative ">
-        <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
-          <h2 className="text-4xl">The Food Name </h2>
-          <p>
+        <div className="absolute bg-black/30 bottom-2 left-2 md:bottom-10 md:left-10 text-white p-2 md:p-8 rounded-lg">
+          <h2 className="text:lg md:text-4xl">The Food Name </h2>
+          <p className="text-sm md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             minus!
           </p>
@@ -32,9 +32,9 @@ const SliderComponent = () => {
         />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
-        <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
-          <h2 className="text-4xl">The Food Name </h2>
-          <p>
+        <div className="absolute bg-black/30 bottom-2 left-2 md:bottom-10 md:left-10 text-white p-2 md:p-8 rounded-lg">
+          <h2 className="text:lg md:text-4xl">The Food Name </h2>
+          <p className="text-sm md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             minus!
           </p>
@@ -46,9 +46,9 @@ const SliderComponent = () => {
         />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
-        <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
-          <h2 className="text-4xl">The Food Name </h2>
-          <p>
+        <div className="absolute bg-black/30 bottom-2 left-2 md:bottom-10 md:left-10 text-white p-2 md:p-8 rounded-lg">
+          <h2 className="text:lg md:text-4xl">The Food Name </h2>
+          <p className="text-sm md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             minus!
           </p>
@@ -60,9 +60,9 @@ const SliderComponent = () => {
         />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
-        <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
-          <h2 className="text-4xl">The Food Name </h2>
-          <p>
+        <div className="absolute bg-black/30 bottom-2 left-2 md:bottom-10 md:left-10 text-white p-2 md:p-8 rounded-lg">
+          <h2 className="text:lg md:text-4xl">The Food Name </h2>
+          <p className="text-sm md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             minus!
           </p>
@@ -74,9 +74,9 @@ const SliderComponent = () => {
         />
       </SwiperSlide>
       <SwiperSlide className="w-full h-full relative">
-        <div className="absolute bg-black/30 bottom-10 left-10 text-white p-8 rounded-lg">
-          <h2 className="text-4xl">The Food Name </h2>
-          <p>
+        <div className="absolute bg-black/30 bottom-2 left-2 md:bottom-10 md:left-10 text-white p-2 md:p-8 rounded-lg">
+          <h2 className="text:lg md:text-4xl">The Food Name </h2>
+          <p className="text-sm md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             minus!
           </p>

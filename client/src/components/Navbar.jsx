@@ -3,14 +3,14 @@ import LOGO from "../assets/logo.png";
 import { Search } from "lucide-react";
 const Navbar = () => {
   return (
-    <div className="py-2 border-b-2 border-b-amber-950 bg-linear-to-b from-[#ee1f04] to-[#690303]">
-      <div className="w-3/5 mx-auto flex flex-col items-center justify-between pb-1">
+    <div className="px-2 sm:px-0 py-2 border-b-2 border-b-amber-950 bg-linear-to-b from-[#ee1f04] to-[#690303]">
+      <div className="w-full md:w-3/5 mx-auto flex flex-col items-center justify-between pb-1">
         <div className="flex flex-col items-start justify-center ">
           <img className="w-24" src={LOGO} alt="MAYDA" />
           {/* <h3 className="text-xs text-gray-300 ">Original & Bosnian Cusine</h3> */}
         </div>
-        <div className="flex flex-row items-center justify-between w-full">
-          <div className="flex flex-row space-x-8 text-white">
+        <div className="flex flex-col sm:flex-row items-center justify-between w-full space-y-2 sm:space-y-0">
+          <div className="flex flex-row space-x-3 sm:space-x-8 text-white">
             <Link
               to="/"
               className="relative inline-block text-lg after:absolute after:left-0 after:bottom-0 after:rounded-full after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100"
@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="w-3/5 m-auto pt-2 border-t border-white/20 flex flex-row items-center">
+      <div className="w-full md:w-3/5 m-auto pt-2 border-t border-white/20 flex flex-row items-center">
         <div className="w-full flex flex-row items-center justify-center">
           <h3 className="text-xl uppercase text-gray-300 ">
             Original & Bosnian Cusine

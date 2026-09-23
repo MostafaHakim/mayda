@@ -81,9 +81,9 @@ const HomeComponent = () => {
   ];
 
   return (
-    <div className="w-3/5 m-auto">
+    <div className="w-full md:w-3/5 m-auto">
       {/* ---------------Hero Section---------------------- */}
-      <div className="my-4 w-full h-150 rounded-xl overflow-hidden">
+      <div className="p-2 md:my-4 w-full h-72 md:h-150 rounded-xl overflow-hidden">
         <SliderComponent />
       </div>
       {/* ----------------Food-------------- */}
@@ -106,7 +106,7 @@ const HomeComponent = () => {
         </div>
 
         {/* Food Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {foods.map((food) => (
             <div
               key={food.id}
@@ -137,21 +137,21 @@ const HomeComponent = () => {
               </div>
 
               {/* Content */}
-              <div className="p-5">
+              <div className="p-1 md:p-5">
                 <h2
-                  className="text-xl font-bold text-gray-800
+                  className="text-sm md:text-xl font-bold text-gray-800
             group-hover:text-[#690303]
             transition-colors duration-300"
                 >
                   {food.name}
                 </h2>
 
-                <p className="text-gray-500 text-sm mt-2 leading-6 line-clamp-2">
+                <p className="text-gray-500 text-xs md:text-sm md:mt-2 leading-6 line-clamp-2">
                   {food.description}
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-3 mt-5">
+                <div className="flex flex-col sm:flex-row gap-3 mt-5">
                   <button
                     className="flex-1 bg-[#690303]
                     cursor-pointer
