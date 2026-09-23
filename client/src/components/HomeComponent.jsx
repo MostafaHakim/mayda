@@ -132,7 +132,7 @@ const HomeComponent = () => {
             bg-white px-3 py-1 rounded-full
             shadow-md font-bold text-[#690303]"
                 >
-                  $ {food.price}
+                  ${food.price}
                 </div>
               </div>
 
