@@ -2,8 +2,10 @@ import React from "react";
 import SliderComponent from "./SliderComponent";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
+
 import "swiper/css";
+import "swiper/css/free-mode";
 
 const HomeComponent = () => {
   const foods = [
@@ -121,95 +123,167 @@ const HomeComponent = () => {
           </div>
           <div className=" py-4">
             <Swiper
-              spaceBetween={6}
+              modules={[Autoplay, FreeMode]}
+              spaceBetween={10}
               slidesPerView={2.2}
+              speed={800}
+              freeMode={{
+                enabled: true,
+                momentum: true,
+                momentumRatio: 0.7,
+                momentumVelocityRatio: 0.8,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               breakpoints={{
                 480: {
                   slidesPerView: 2.5,
-                  spaceBetween: 8,
+                  spaceBetween: 12,
                 },
+
                 768: {
                   slidesPerView: 3.2,
-                  spaceBetween: 10,
+                  spaceBetween: 15,
                 },
+
                 1024: {
                   slidesPerView: 4.2,
-                  spaceBetween: 10,
+                  spaceBetween: 18,
                 },
               }}
-              // onSlideChange={() => console.log("slide change")}
-              // onSwiper={(swiper) => console.log(swiper)}
-              className="w-full h-full rounded-xl overflow-hidden"
+              className="w-full rounded-xl"
             >
               {foods.map((food) => (
-                <SwiperSlide className="w-full h-full relative ">
+                <SwiperSlide key={food.id}>
                   <div
-                    key={food.id}
-                    className="group bg-white rounded-2xl overflow-hidden
-        shadow-md hover:shadow-2xl
-        border border-gray-100
-        transition-all duration-300
-        hover:-translate-y-2"
+                    className="
+          group
+          bg-white
+          rounded-2xl
+          overflow-hidden
+          shadow-md
+          hover:shadow-2xl
+          border border-gray-100
+          transition-all
+          duration-300
+          hover:-translate-y-2
+        "
                   >
                     {/* Image */}
-                    <div className="relative overflow-hidden h-52">
+                    <div className="relative overflow-hidden h-40 md:h-52">
                       <img
                         src={food.image}
                         alt={food.name}
-                        className="w-full h-full object-cover
-            group-hover:scale-110
-            transition-transform duration-500"
+                        className="
+              w-full
+              h-full
+              object-cover
+              group-hover:scale-110
+              transition-transform
+              duration-500
+            "
                       />
 
-                      {/* Price Badge */}
+                      {/* Price */}
                       <div
-                        className="absolute top-3 right-3
-            bg-white px-3 py-1 rounded-full
-            shadow-md font-bold text-[#690303]"
+                        className="
+              absolute
+              top-2
+              right-2
+              md:top-3
+              md:right-3
+              bg-white
+              px-2
+              md:px-3
+              py-1
+              rounded-full
+              shadow-md
+              font-bold
+              text-sm
+              md:text-base
+              text-[#690303]
+            "
                       >
                         ${food.price}
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="p-1 md:p-5">
+                    <div className="p-2 md:p-5">
                       <h2
-                        className="text-sm md:text-xl font-bold text-gray-800
-            group-hover:text-[#690303]
-            transition-colors duration-300"
+                        className="
+              text-sm
+              md:text-xl
+              font-bold
+              text-gray-800
+              group-hover:text-[#690303]
+              transition-colors
+              duration-300
+            "
                       >
                         {food.name}
                       </h2>
 
-                      <p className="text-gray-500 text-xs md:text-sm md:mt-2 leading-6 line-clamp-2">
+                      <p
+                        className="
+              text-gray-500
+              text-xs
+              md:text-sm
+              mt-1
+              md:mt-2
+              leading-5
+              md:leading-6
+              line-clamp-2
+            "
+                      >
                         {food.description}
                       </p>
 
                       {/* Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                      <div className="flex flex-col gap-2 mt-3 md:mt-5">
                         <button
-                          className="flex-1 bg-[#690303]
-                    cursor-pointer
-              hover:bg-[#690303]
-              text-white font-semibold
-              py-2.5 rounded-lg
-              transition duration-300
-              active:scale-95"
+                          className="
+                w-full
+                bg-[#690303]
+                cursor-pointer
+                text-white
+                font-semibold
+                text-xs
+                md:text-sm
+                py-2
+                md:py-2.5
+                rounded-lg
+                hover:bg-[#850404]
+                transition
+                duration-300
+                active:scale-95
+              "
                         >
                           Order Now
                         </button>
 
                         <button
-                          className="px-4 py-2.5
-                    cursor-pointer
-              border border-[#690303]
-              text-[#690303]
-              hover:bg-[#690303]
-              hover:text-white
-              font-semibold
-              rounded-lg
-              transition duration-300
-              active:scale-95"
+                          className="
+                w-full
+                cursor-pointer
+                border
+                border-[#690303]
+                text-[#690303]
+                hover:bg-[#690303]
+                hover:text-white
+                font-semibold
+                text-xs
+                md:text-sm
+                py-2
+                md:py-2.5
+                rounded-lg
+                transition
+                duration-300
+                active:scale-95
+              "
                         >
                           See more
                         </button>
@@ -221,6 +295,7 @@ const HomeComponent = () => {
             </Swiper>
           </div>
         </div>
+        {/* ------------Non Halal---------------- */}
         <div>
           <div>
             <h2 className="text-xl font-bold md:text-4xl text-[#690303]">
@@ -233,95 +308,167 @@ const HomeComponent = () => {
           </div>
           <div className=" py-4">
             <Swiper
-              spaceBetween={6}
+              modules={[Autoplay, FreeMode]}
+              spaceBetween={10}
               slidesPerView={2.2}
+              speed={800}
+              freeMode={{
+                enabled: true,
+                momentum: true,
+                momentumRatio: 0.7,
+                momentumVelocityRatio: 0.8,
+              }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               breakpoints={{
                 480: {
                   slidesPerView: 2.5,
-                  spaceBetween: 8,
+                  spaceBetween: 12,
                 },
+
                 768: {
                   slidesPerView: 3.2,
-                  spaceBetween: 10,
+                  spaceBetween: 15,
                 },
+
                 1024: {
                   slidesPerView: 4.2,
-                  spaceBetween: 10,
+                  spaceBetween: 18,
                 },
               }}
-              // onSlideChange={() => console.log("slide change")}
-              // onSwiper={(swiper) => console.log(swiper)}
-              className="w-full h-full rounded-xl overflow-hidden"
+              className="w-full rounded-xl"
             >
               {foods.map((food) => (
-                <SwiperSlide className="w-full h-full relative ">
+                <SwiperSlide key={food.id}>
                   <div
-                    key={food.id}
-                    className="group bg-white rounded-2xl overflow-hidden
-        shadow-md hover:shadow-2xl
-        border border-gray-100
-        transition-all duration-300
-        hover:-translate-y-2"
+                    className="
+          group
+          bg-white
+          rounded-2xl
+          overflow-hidden
+          shadow-md
+          hover:shadow-2xl
+          border border-gray-100
+          transition-all
+          duration-300
+          hover:-translate-y-2
+        "
                   >
                     {/* Image */}
-                    <div className="relative overflow-hidden h-52">
+                    <div className="relative overflow-hidden h-40 md:h-52">
                       <img
                         src={food.image}
                         alt={food.name}
-                        className="w-full h-full object-cover
-            group-hover:scale-110
-            transition-transform duration-500"
+                        className="
+              w-full
+              h-full
+              object-cover
+              group-hover:scale-110
+              transition-transform
+              duration-500
+            "
                       />
 
-                      {/* Price Badge */}
+                      {/* Price */}
                       <div
-                        className="absolute top-3 right-3
-            bg-white px-3 py-1 rounded-full
-            shadow-md font-bold text-[#690303]"
+                        className="
+              absolute
+              top-2
+              right-2
+              md:top-3
+              md:right-3
+              bg-white
+              px-2
+              md:px-3
+              py-1
+              rounded-full
+              shadow-md
+              font-bold
+              text-sm
+              md:text-base
+              text-[#690303]
+            "
                       >
                         ${food.price}
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="p-1 md:p-5">
+                    <div className="p-2 md:p-5">
                       <h2
-                        className="text-sm md:text-xl font-bold text-gray-800
-            group-hover:text-[#690303]
-            transition-colors duration-300"
+                        className="
+              text-sm
+              md:text-xl
+              font-bold
+              text-gray-800
+              group-hover:text-[#690303]
+              transition-colors
+              duration-300
+            "
                       >
                         {food.name}
                       </h2>
 
-                      <p className="text-gray-500 text-xs md:text-sm md:mt-2 leading-6 line-clamp-2">
+                      <p
+                        className="
+              text-gray-500
+              text-xs
+              md:text-sm
+              mt-1
+              md:mt-2
+              leading-5
+              md:leading-6
+              line-clamp-2
+            "
+                      >
                         {food.description}
                       </p>
 
                       {/* Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                      <div className="flex flex-col gap-2 mt-3 md:mt-5">
                         <button
-                          className="flex-1 bg-[#690303]
-                    cursor-pointer
-              hover:bg-[#690303]
-              text-white font-semibold
-              py-2.5 rounded-lg
-              transition duration-300
-              active:scale-95"
+                          className="
+                w-full
+                bg-[#690303]
+                cursor-pointer
+                text-white
+                font-semibold
+                text-xs
+                md:text-sm
+                py-2
+                md:py-2.5
+                rounded-lg
+                hover:bg-[#850404]
+                transition
+                duration-300
+                active:scale-95
+              "
                         >
                           Order Now
                         </button>
 
                         <button
-                          className="px-4 py-2.5
-                    cursor-pointer
-              border border-[#690303]
-              text-[#690303]
-              hover:bg-[#690303]
-              hover:text-white
-              font-semibold
-              rounded-lg
-              transition duration-300
-              active:scale-95"
+                          className="
+                w-full
+                cursor-pointer
+                border
+                border-[#690303]
+                text-[#690303]
+                hover:bg-[#690303]
+                hover:text-white
+                font-semibold
+                text-xs
+                md:text-sm
+                py-2
+                md:py-2.5
+                rounded-lg
+                transition
+                duration-300
+                active:scale-95
+              "
                         >
                           See more
                         </button>
